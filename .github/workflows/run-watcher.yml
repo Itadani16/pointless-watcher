@@ -1,9 +1,8 @@
 name: Run PointlessWatcher
 
-# スケジュール設定（例：毎日9:00と21:00に実行）
 on:
   schedule:
-    - cron: "0 0,12 * * *"  # UTC時間。日本時間では +9時間
+    - cron: "0 0,12 * * *"  # 日本時間9:00と21:00に実行
   workflow_dispatch:        # 手動実行も可能
 
 jobs:
@@ -17,9 +16,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-
-      - name: 依存ライブラリをインストール
-        run: npm install node-fetch@2
 
       - name: watcher.js を実行
         run: node watcher.js
