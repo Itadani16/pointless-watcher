@@ -1,3 +1,6 @@
+console.log("BOT_TOKEN:", BOT_TOKEN);
+console.log("CHAT_ID:", CHAT_ID);
+
 // Node.js 版 PointlessWatcher
 const fs = require("fs");
 const fetch = require("node-fetch");
